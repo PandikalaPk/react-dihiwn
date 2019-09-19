@@ -20,10 +20,10 @@ class App extends Component {
         <Hello name={this.state.name} />
         <SearchOptions />
         <ExcludedStatus />
-        //<RegionCountry />
+        <RegionCountry />
 
         <p>
-         Doing...
+         Entering...
         </p>
       </div>
     );
