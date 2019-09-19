@@ -48,8 +48,6 @@ componentWillMount = () => {
   createCheckboxes = () => (
     result.map(this.createCheckbox)
   )
-
-
 render() {
    const data = this.state.result;
    
