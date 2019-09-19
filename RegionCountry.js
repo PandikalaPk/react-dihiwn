@@ -57,7 +57,25 @@ render() {
    
     return (
       <div>
-      <h3> RegionCountry</h3>
+      <h2 align ="left"> Region/Country</h2>  
+        <div> 
+             <h4>
+                <label>
+                  <input type="checkbox" value="All"/>
+                  All
+                </label>
+              </h4>
+          
+              <h4>
+                <label>
+                  <input type="checkbox" value="Misc"/>
+                  Misc
+                </label>
+              </h4>
+            
+        <input className="textBox" type="text" placeholder=" Quick Search" /> 
+        
+        </div>
       <Checkbox region={data} />
       
         

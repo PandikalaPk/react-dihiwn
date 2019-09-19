@@ -38,7 +38,7 @@ class Checkbox extends Component {
               <div className="column">
                 <div className="card">
 
-                  <header className="card-header">
+                  <header className="inside-header">
                     <h4>
                       <label>
                         <input type="checkbox"
