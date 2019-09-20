@@ -12,6 +12,7 @@ class Checkbox extends Component {
   }
 
     toggleCheckboxChange = () => {
+      
       const { handleCheckboxChange, label } = this.props;
 
       this.setState(({ isChecked }) => (
@@ -38,7 +39,7 @@ class Checkbox extends Component {
               <div className="column">
                 <div className="card">
 
-                  <header className="inside-header">
+                  <header className="region-header">
                     <h4>
                       <label>
                         <input type="checkbox"
@@ -75,5 +76,10 @@ class Checkbox extends Component {
       );
     }
   }
+
+  Checkbox.propTypes = {
+  label:{this.props.region}.isRequired,
+  handleCheckboxChange: PropTypes.func.isRequired,
+};
 
   export default Checkbox;
