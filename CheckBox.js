@@ -19,18 +19,19 @@ class CheckBox extends Component {
 
     return (
       <div className="row" >
-             {this.props.countries.map(rCountry => {
-          console.log("pk..",this.props.countries);
+             const country = {this.props.countries};
+             console.log("",country);
+          
                return (
                       <div>
                         <header className="country-header">
                           <label>
                             <input type="checkbox"
-                              value={rCountry.country_name}
+                              value={country.country_name}
                               checked={isChecked}
                               onChange={this.toggleCheckboxChange}
                             />
-                            {rCountry.country_name}
+                            {country.country_name}
                           </label>
                         </header>
                       </div>)
