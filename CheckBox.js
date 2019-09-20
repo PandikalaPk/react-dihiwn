@@ -19,36 +19,27 @@ class CheckBox extends Component {
 
     return (
       <div className="row" >
-        {this.props.region &&
-          this.props.region.regions.map(regionC => {
-            return (
-              <div className="column">
-                <div className="card">
-
-                  {regionC.countries.map(country => {
-                    return (
+             {this.props.countries.map(rCountry => {
+          console.log("pk..",this.props.countries);
+               return (
                       <div>
                         <header className="country-header">
                           <label>
                             <input type="checkbox"
-                              value={country.country_name}
+                              value={rCountry.country_name}
                               checked={isChecked}
                               onChange={this.toggleCheckboxChange}
                             />
-                            {country.country_name}
+                            {rCountry.country_name}
                           </label>
                         </header>
                       </div>)
                   })}
                 </div>
-              </div>
-            )
-          })
+                         
+          )
         }
-      </div>
-    );
-  }
-}
+      }
 
 export default CheckBox;
 

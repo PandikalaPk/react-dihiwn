@@ -17,7 +17,7 @@ class CheckBoxList extends Component {
   render() {
     const { label } = this.props;
     const { isChecked } = this.state;
-
+    
     return (
       <div className="row" >
         {this.props.region &&
@@ -41,7 +41,7 @@ class CheckBoxList extends Component {
                     </Wrapper>
                   </header>
                 </div>
-                <CheckBox countrydata={cdata} />
+                <CheckBox countries={this.props.region.regions.countries}/>
               </div>
             )
           })
