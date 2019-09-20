@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+import styled from 'styled-components';
 import './style.css';
 
 
@@ -7,32 +8,42 @@ class SearchOptions extends Component {
   constructor() {
     super();
     this.state = {
-      checkboxValue:'',
+      checkboxValue: '',
     };
-   this.checkboxChange = this.checkboxChange.bind(this);
+    this.checkboxChange = this.checkboxChange.bind(this);
   }
 
-  checkboxChange(event){
-  if(event.target.checked){
-    this.setState({checkboxValue:event.target.value});
-  }else{
-    this.setState({checkboxValue:''});
+  checkboxChange(event) {
+    if (event.target.checked) {
+      this.setState({ checkboxValue: event.target.value });
+    } else {
+      this.setState({ checkboxValue: '' });
+    }
   }
-}
 
-render() {
+  render() {
     const data = this.state.result;
-    
+    const Title = styled.h1`
+  font-size: 1.0em;
+  text-align: left;
+  color:White;
+`;
+    const Wrapper = styled.section`
+  padding: 1.5 em;
+  background: #490975;
+`;
+
     return (
-    <div>
-      <h2 align ="left"> Search Options</h2> 
+      <div>
         <div className="first">
-                <header className="inside-header">
-                <h4 align ="left"> Hierarchy Comparison Direction</h4> 
-                </header>
-                <header className="first-header">
-                <input type="radio" name="fruit" value="Compare Down Hierarchy"  onChange={this.checkboxChange}/> Compare Down Hierarchy
-                <input type="radio" name="fruit" value="Compare Across Hierarchy"  onChange={this.checkboxChange} />Compare Across Hierarchy
+          <Wrapper>
+            <Title>
+              Hierarchy Comparison Direction
+          </Title>
+          </Wrapper>
+          <header className="all-header">
+            <input type="radio" name="fruit" value="Compare Down Hierarchy" onChange={this.checkboxChange} /> Compare Down Hierarchy
+                <input type="radio" name="fruit" value="Compare Across Hierarchy" onChange={this.checkboxChange} />Compare Across Hierarchy
                 </header>
         </div>
         <h5>User have Selected {this.state.checkboxValue}</h5>

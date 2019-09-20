@@ -62,11 +62,21 @@ h1, p {
     
 }
 
-.inside-header {
+.all-header {
    
     margin-bottom: 0;
-    background-color:slateblue;
+    background-color:whitesmoke;
     border-bottom: 1px solid rgba(0,0,0,.125);
+    font-family: Arial, Helvetica, sans-serif;
+      
+    
+}
+
+.country-header {
+   
+    margin-bottom: 0;
+    background-color:whitesmoke;
+    border-bottom: 0px solid rgba(0,0,0,.125);
     font-family: Arial, Helvetica, sans-serif;
       
     
@@ -75,8 +85,9 @@ h1, p {
 .region-header {
    
     margin-bottom: 0;
-    background-color:royalblue(78, 15, 138);
-    border-bottom: 1px solid rgba(139, 68, 206, 0.986);
+    background-color:#490975;
+    border-bottom: 1px solid,white;
     font-family: Arial, Helvetica, sans-serif;
+    font-style: white;
     
 }
