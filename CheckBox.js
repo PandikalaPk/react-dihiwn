@@ -16,24 +16,17 @@ class CheckBox extends Component {
   render() {
     const { label } = this.props;
     const { isChecked } = this.state;
+     const country = this.props.countries;
+             console.log("Hello",this.props.countries);
 
     return (
       <div className="row" >
-             const country = {this.props.countries};
-             console.log("",country);
+            
           
                return (
                       <div>
-                        <header className="country-header">
-                          <label>
-                            <input type="checkbox"
-                              value={country.country_name}
-                              checked={isChecked}
-                              onChange={this.toggleCheckboxChange}
-                            />
-                            {country.country_name}
-                          </label>
-                        </header>
+                      <h4>{this.props.countriesval}</h4>
+                       
                       </div>)
                   })}
                 </div>

@@ -17,6 +17,8 @@ class CheckBoxList extends Component {
   render() {
     const { label } = this.props;
     const { isChecked } = this.state;
+    const dataCHB = this.state.result;
+    console.log("In CHBList", dataCHB);
     
     return (
       <div className="row" >
@@ -37,11 +39,25 @@ class CheckBoxList extends Component {
                           />
                           {regionC.region_name}
                         </label>
+                        
                       </Title>
-                    </Wrapper>
+                  </Wrapper>
+                  <Title>
+                        <label>
+                          <input type="checkbox"
+                            value={regionC.countries.country_name}
+                            checked={isChecked}
+                            onChange={(e) => this.toggleCheckboxChange(e)}
+                          />
+                          {regionC.countries.country_name}
+                        </label>
+                        
+                      </Title>
                   </header>
+
                 </div>
-                <CheckBox countries={this.props.region.regions.countries}/>
+                <CheckBox countriesval={this.props.regionC.countries.country_name}/>
+                
               </div>
             )
           })
