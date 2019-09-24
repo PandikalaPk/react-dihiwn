@@ -42,21 +42,11 @@ class CheckBoxList extends Component {
                         
                       </Title>
                   </Wrapper>
-                  <Title>
-                        <label>
-                          <input type="checkbox"
-                            value={regionC.countries.country_name}
-                            checked={isChecked}
-                            onChange={(e) => this.toggleCheckboxChange(e)}
-                          />
-                          {regionC.countries.country_name}
-                        </label>
-                        
-                      </Title>
+                 
                   </header>
 
                 </div>
-                <CheckBox countriesval={this.props.regionC.countries.country_name}/>
+               
                 
               </div>
             )

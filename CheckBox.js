@@ -16,24 +16,23 @@ class CheckBox extends Component {
   render() {
     const { label } = this.props;
     const { isChecked } = this.state;
-     const country = this.props.countries;
-             console.log("Hello",this.props.countries);
+    const country = this.state.countries;
+    console.log("Hello", this.state.countries);
 
     return (
       <div className="row" >
-            
-          
-               return (
+
+        return (
                       <div>
-                      <h4>{this.props.countriesval}</h4>
-                       
-                      </div>)
-                  })}
+          <h4>{this.props.countriesval}</h4>
+
+        </div>)
+    })}
                 </div>
-                         
-          )
-        }
-      }
+
+    )
+  }
+}
 
 export default CheckBox;
 
